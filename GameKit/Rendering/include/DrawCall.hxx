@@ -6,14 +6,13 @@
 #include "Math/Vector3.hxx"
 #include "Math/Vector4.hxx"
 
-#ifndef __swift__
 namespace Rendering {
-#endif
 
     class GPUTask {
         
         public:
         enum class CommandType {
+            
             CLEAR_COLOR,
             CLEAR_DEPTH
         };
@@ -67,7 +66,7 @@ namespace Rendering {
         }
     };
 
-    auto BuildDrawCall(
+    inline auto BuildDrawCall(
         Rendering::DrawSpace space,
         uint8_t viewPort, 
         Rendering::RenderLayer layer, 
@@ -81,7 +80,7 @@ namespace Rendering {
         return GPUDrawCall(space, viewPort, layer, materialId, depth, meshId, position, rotation, scale);
     }
 
-    auto BuildDrawCallCommand(
+    inline auto BuildDrawCallCommand(
         Rendering::DrawSpace space,
         uint8_t viewPort, 
         Rendering::RenderLayer layer, 
@@ -89,7 +88,4 @@ namespace Rendering {
     ) -> GPUCommand {
         return GPUCommand(space, viewPort, layer, command);
     }
-
-#ifndef __swift__
 }
-#endif
