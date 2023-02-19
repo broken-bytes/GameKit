@@ -1,8 +1,10 @@
 #pragma once 
 
-#include "Common/PCH.hxx"
 #include "RenderLayer.hxx"
 #include "DrawSpace.hxx"
+
+#include "Common/PCH.hxx"
+
 #include "Math/Vector3.hxx"
 #include "Math/Vector4.hxx"
 
@@ -12,7 +14,7 @@ namespace Rendering {
         
         public:
         enum class CommandType {
-            
+
             CLEAR_COLOR,
             CLEAR_DEPTH
         };

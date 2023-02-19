@@ -1,6 +1,5 @@
 #pragma once
 
-
 #include "Buffer.hxx"
 #include "Color.hxx"
 #include "DrawCall.hxx"
@@ -14,8 +13,9 @@ namespace Rendering {
 
     class CommandList {
         
+        public:
         enum class CommandListType {
-            
+
             DRAW,
             UPLOAD,
             COPY,

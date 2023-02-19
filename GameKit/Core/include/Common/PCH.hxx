@@ -7,3 +7,6 @@
 #include <cstdint>
 #include <malloc.h>
 #endif
+
+typedef void* Window;
+typedef void* NativeEvent;
