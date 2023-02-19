@@ -1,0 +1,12 @@
+# CMake
+CMakeFiles/
+build/
+
+# SPM
+.build/
+
+# IDEs
+cache/
+.vscode/
+
+
